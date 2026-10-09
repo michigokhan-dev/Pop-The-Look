@@ -23,36 +23,60 @@
     input::placeholder {
       color: rgba(255, 255, 255, 0.8);
     }
-  </style>
-</head>
+  </style><header class="bg-white border-b border-black sticky top-0 z-20">
 
-<body class="bg-[#FAF9F6]">
+  <div class="flex items-center justify-between px-8 py-5">
 
-  <div class="fixed inset-0 z-40">
-    <img
-      src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1000&q=80"
-      alt="Fashion collection"
-      class="absolute inset-0 w-full h-full object-cover object-top"
-    >
+    <!-- Logo -->
+    <a href="index.html" class="serif text-2xl tracking-[0.25em] font-bold">
+      POP THE LOOK
+    </a>
 
-    <div class="absolute inset-0 bg-black/15"></div>
 
-    <div class="relative z-10 min-h-screen flex flex-col">
+    <!-- Icons -->
+    <div class="flex items-center gap-5 text-xl">
 
-      <header class="flex items-center justify-center relative p-4 bg-white/60 backdrop-blur-md border-b border-black/10">
+      <!-- Wishlist -->
+      <button title="Wishlist">
+        ♡
+      </button>
 
-        <a
-          href="../../index.html"
-          class="absolute left-4 text-black text-2xl font-bold no-underline"
-          aria-label="Back to home"
-        >&lt;</a>
+      <!-- Account -->
+      <a href="frontend/pages/login.html" title="Account">
+        👤
+      </a>
 
-        <a
-          href="../../index.html"
-          class="serif text-black font-bold text-[22px] tracking-[0.2em] no-underline"
-        >POP THE LOOK</a>
+      <!-- Bag -->
+      <button class="text-sm font-bold">
+        👜 (0)
+      </button>
 
-      </header>
+    </div>
+
+  </div>
+
+
+  <!-- Search -->
+  <div class="flex justify-center pb-5 px-5">
+
+    <div class="relative w-full max-w-2xl">
+
+      <span class="absolute left-5 top-1/2 -translate-y-1/2 text-lg">
+        🔍
+      </span>
+
+      <input
+        type="text"
+        placeholder="Search outerwear..."
+        class="w-full h-12 rounded-full border border-black pl-12 pr-5 outline-none transition-all duration-300 focus:scale-105 focus:shadow-lg"
+      >
+
+    </div>
+
+  </div>
+
+
+</header> </header>
 
       <main class="flex-1 flex items-center justify-center p-6 overflow-y-auto">
 
