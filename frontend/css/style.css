@@ -1,1 +1,93 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #FAF9F6;
+    color: #000;
+}
 
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: white;
+    border-bottom: 1px solid black;
+}
+
+header h1 {
+    font-family: Georgia, serif;
+    letter-spacing: 5px;
+}
+
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+header > a {
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    padding: 8px 15px;
+}
+
+
+.hero {
+    height: 550px;
+    background-image: url("https://images.unsplash.com/photo-1483985988355-763728e1935b");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+
+.hero h2 {
+    font-size: 50px;
+    letter-spacing: 5px;
+}
+
+
+.hero button {
+    padding: 15px 40px;
+    background: white;
+    border: none;
+    font-weight: bold;
+}
+
+
+.products {
+    padding: 40px;
+    text-align: center;
+}
+
+
+.product-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+
+.product {
+    width: 250px;
+    height: 300px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+}
+
+
+footer {
+    padding: 30px;
+    text-align: center;
+    border-top: 1px solid black;
+}
