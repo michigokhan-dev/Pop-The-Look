@@ -1,56 +1,85 @@
-:root {
-    --bg: #fbfaf8;
-    --black: #000;
-    --soft: #f2f0ec;
-}
+/* =====================================
+   POP THE LOOK - LUXURY STYLE CSS
+   PART 1/3
+===================================== */
 
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 
 body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--black);
+
+    background: #fbfaf8;
+    color: #000;
     font-family: Arial, Helvetica, sans-serif;
-}
-
-
-
-.app {
-    min-height: 100vh;
     overflow-x: hidden;
+
 }
 
 
 
-/* HEADER */
+a {
 
-.header {
+    color: inherit;
+    text-decoration: none;
+
+}
+
+
+
+.serif {
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 700;
+    letter-spacing: .02em;
+
+}
+
+
+
+.sans {
+
+    font-family: -apple-system,
+    BlinkMacSystemFont,
+    "Helvetica Neue",
+    Helvetica,
+    Arial,
+    sans-serif;
+
+}
+
+
+
+
+
+/* =========================
+        HEADER
+========================= */
+
+
+header {
 
     position: sticky;
     top: 0;
     z-index: 20;
-
-    background: rgba(251,250,248,0.95);
+    background: rgba(251,250,248,.95);
     backdrop-filter: blur(8px);
-
-    border-bottom: 1px solid rgba(0,0,0,0.08);
+    border-bottom: 1px solid rgba(0,0,0,.08);
 
 }
 
 
 
-.header-inner {
+.header-main {
 
-    height: 68px;
-
-    max-width: 1440px;
-    margin: auto;
-
-    padding: 0 32px;
+    height:68px;
+    max-width:1440px;
+    margin:auto;
+    padding:0 32px;
 
     display:flex;
     align-items:center;
@@ -62,42 +91,60 @@ body {
 
 .logo {
 
-    font-family: Georgia, serif;
-
+    font-family:Georgia,serif;
     font-size:22px;
-
     font-weight:bold;
-
-    letter-spacing:0.02em;
-
-    white-space:nowrap;
+    letter-spacing:.02em;
 
 }
+
+
 
 
 
 /* SEARCH */
 
 
-.search-wrapper {
+.search-container {
 
+    display:flex;
+    justify-content:center;
+    flex:1;
+    padding:0 30px;
+
+}
+
+
+
+.search-box {
+
+    position:relative;
     width:320px;
-
     height:38px;
 
-    background:white;
-
     border:1px solid black;
-
     border-radius:50px;
 
     display:flex;
-
     align-items:center;
 
-    padding:0 15px;
+    padding:0 16px;
 
-    position:relative;
+    background:white;
+
+}
+
+
+
+.search-box input {
+
+    width:100%;
+    height:100%;
+
+    border:none;
+    outline:none;
+
+    font-size:13px;
 
 }
 
@@ -105,78 +152,64 @@ body {
 
 .search-icon {
 
-    font-size:18px;
-
+    margin-right:10px;
+    font-size:14px;
     opacity:.6;
 
 }
 
 
 
-.search-wrapper input {
 
-    width:100%;
-
-    height:100%;
-
-    border:0;
-
-    outline:none;
-
-    margin-left:8px;
-
-    background:transparent;
-
-}
-
-
-
-#placeholderText {
+.search-placeholder {
 
     position:absolute;
-
     left:38px;
 
     color:rgba(0,0,0,.5);
-
     font-size:13px;
 
     pointer-events:none;
 
-    transition:.3s;
-
 }
 
 
 
-/* HEADER BUTTONS */
 
 
-.header-actions {
+/* RIGHT HEADER */
+
+
+.header-right {
 
     display:flex;
-
     align-items:center;
-
     gap:24px;
 
 }
 
 
 
-.header-actions button {
+.header-right button {
 
     background:none;
-
-    border:0;
-
+    border:none;
     cursor:pointer;
 
     font-size:13px;
-
     letter-spacing:.08em;
+    text-transform:uppercase;
 
 }
+
+
+
+.header-right button:hover {
+
+    opacity:.6;
+
+}
+
 
 
 
@@ -188,50 +221,51 @@ body {
 
 
 
-.bag small {
+.bag-count {
 
     position:absolute;
 
-    top:-10px;
-
-    right:-10px;
+    top:-8px;
+    right:-8px;
 
     width:16px;
-
     height:16px;
+
+    background:black;
+    color:white;
 
     border-radius:50%;
 
-    background:black;
-
-    color:white;
+    font-size:10px;
 
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
-    font-size:10px;
 
 }
 
 
 
-/* CATEGORY */
+
+
+/* =========================
+ CATEGORY BAR
+========================= */
 
 
 .category-bar {
 
     display:flex;
-
     justify-content:center;
+    align-items:center;
 
     gap:40px;
 
-    padding:20px;
+    padding:20px 24px;
 
     border-bottom:1px solid rgba(0,0,0,.06);
+
+    overflow-x:auto;
 
 }
 
@@ -239,43 +273,35 @@ body {
 
 .category-bar button {
 
+    border:none;
     background:none;
 
-    border:0;
+    cursor:pointer;
 
     font-size:12px;
 
     letter-spacing:.18em;
 
-    cursor:pointer;
+    text-transform:uppercase;
 
     color:rgba(0,0,0,.6);
 
 }
 
+/* =====================================
+   POP THE LOOK - LUXURY STYLE CSS
+   PART 2/3
+===================================== */
 
 
-.category-bar .active {
-
-    color:black;
-
-    font-weight:bold;
-
-    text-decoration:underline;
-
-    text-underline-offset:8px;
-
-}
+/* =========================
+        PRODUCT GRID
+========================= */
 
 
-
-/* PRODUCTS */
-
-
-.products {
+.products-container {
 
     max-width:1400px;
-
     margin:auto;
 
     padding:40px 32px;
@@ -288,7 +314,8 @@ body {
 
     display:grid;
 
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:
+    repeat(3,1fr);
 
     gap:40px;
 
@@ -296,9 +323,10 @@ body {
 
 
 
+
 .product-card {
 
-    background:transparent;
+    background:#fbfaf8;
 
 }
 
@@ -306,15 +334,30 @@ body {
 
 .product-image {
 
+    position:relative;
+
+    width:100%;
+
     aspect-ratio:3/4;
 
     background:#f2f0ec;
 
+    overflow:hidden;
+
     border:1px solid rgba(0,0,0,.04);
 
-    position:relative;
+}
 
-    overflow:hidden;
+
+
+
+/* luxury placeholder */
+
+.luxury-placeholder {
+
+    position:absolute;
+
+    inset:0;
 
     display:flex;
 
@@ -326,13 +369,13 @@ body {
 
 
 
-.product-placeholder {
+.luxury-placeholder span {
 
     font-family:Georgia,serif;
 
-    letter-spacing:.3em;
+    font-size:10px;
 
-    font-size:11px;
+    letter-spacing:.3em;
 
     color:rgba(0,0,0,.3);
 
@@ -340,29 +383,88 @@ body {
 
 
 
-.quick-view {
+.luxury-placeholder:before {
+
+    content:"";
 
     position:absolute;
 
-    bottom:12px;
+    width:1px;
+
+    height:65px;
+
+    background:rgba(0,0,0,.12);
+
+    top:50%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+}
+
+
+
+.luxury-placeholder:after {
+
+    content:"";
+
+    position:absolute;
+
+    left:16px;
+
+    right:16px;
+
+    bottom:20px;
+
+    height:1px;
+
+    background:rgba(0,0,0,.1);
+
+}
+
+
+
+
+
+
+/* QUICK VIEW */
+
+
+.quick-view {
+
+    position:absolute;
 
     left:12px;
 
     right:12px;
 
-    height:36px;
+    bottom:12px;
+
+
+    height:38px;
+
 
     background:white;
 
     border:1px solid black;
 
-    opacity:0;
 
-    transition:.3s;
+    font-size:11px;
 
     letter-spacing:.15em;
 
-    font-size:11px;
+    text-transform:uppercase;
+
+
+    opacity:0;
+
+
+    cursor:pointer;
+
+
+    transition:.3s;
+
 
 }
 
@@ -376,86 +478,166 @@ body {
 
 
 
-.product-card h3 {
+
+
+/* PRODUCT INFO */
+
+
+.product-info {
+
+    padding-top:16px;
+
+}
+
+
+
+.product-name-price {
+
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:10px;
+
+
+}
+
+
+
+.product-name-price h3 {
+
 
     font-size:12px;
 
     letter-spacing:.08em;
 
-    margin-top:15px;
+    text-transform:uppercase;
+
+    font-weight:500;
+
 
 }
 
 
 
-.product-card p {
+.product-name-price span {
+
+
+    font-size:12px;
+
+    color:rgba(0,0,0,.7);
+
+
+}
+
+
+
+.product-info p {
+
+
+    margin-top:6px;
 
     font-size:11px;
 
     color:rgba(0,0,0,.4);
 
+
 }
 
 
 
-/* ACCOUNT MENU */
+
+
+
+
+/* =========================
+ ACCOUNT DROPDOWN
+========================= */
 
 
 .account-dropdown {
 
+
     position:absolute;
 
-    right:20px;
 
-    top:75px;
+    top:70px;
 
-    width:220px;
+    right:16px;
+
+
+    width:224px;
+
 
     background:white;
 
+
     border:1px solid black;
+
 
     box-shadow:0 10px 30px rgba(0,0,0,.15);
 
-    display:none;
-
-    flex-direction:column;
 
     z-index:50;
 
+
+    display:none;
+
+
 }
 
 
 
-.account-dropdown.show {
+.account-dropdown.active {
+
 
     display:flex;
 
+    flex-direction:column;
+
+
 }
+
 
 
 
 .account-dropdown button {
 
-    padding:14px 18px;
 
-    background:white;
+    background:none;
 
-    border:0;
+    border:none;
 
     text-align:left;
 
+
+    padding:14px 20px;
+
+
     cursor:pointer;
+
+
+    font-size:13px;
+
+
+    letter-spacing:.05em;
+
+    text-transform:uppercase;
+
 
 }
 
 
 
+
 .account-dropdown button:hover {
+
 
     background:black;
 
     color:white;
+
 
 }
 
@@ -463,69 +645,677 @@ body {
 
 .account-dropdown hr {
 
-    width:100%;
 
-    border:.5px solid #ddd;
+    border:none;
+
+    border-top:1px solid rgba(0,0,0,.1);
+
 
 }
 
 
 
-/* TOAST */
 
 
-#toast {
+
+
+/* =========================
+ TOAST MESSAGE
+========================= */
+
+
+.toast {
+
 
     position:fixed;
 
-    bottom:25px;
+
+    bottom:24px;
 
     left:50%;
 
+
     transform:translateX(-50%);
+
 
     background:black;
 
     color:white;
 
+
     padding:12px 22px;
 
-    border-radius:30px;
+
+    border-radius:50px;
+
+
+    font-size:12px;
+
+
+    letter-spacing:.05em;
+
 
     display:none;
 
-    z-index:100;
+
+    z-index:60;
+
 
 }
 
 
 
-/* FOOTER */
+.toast.show {
 
 
-footer {
+    display:block;
 
-    border-top:1px solid rgba(0,0,0,.1);
+}
 
-    padding:30px;
+.category-bar button.active {
+
+    color:black;
+    font-weight:bold;
+
+    text-decoration:underline;
+    text-underline-offset:8px;
+
+}
+
+/* =====================================
+   POP THE LOOK - LUXURY STYLE CSS
+   PART 3/3
+===================================== */
+
+
+/* =========================
+        SIGN IN PAGE
+========================= */
+
+
+.signin-page {
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:40;
+
+    overflow:auto;
+
+    display:none;
+
+}
+
+
+
+.signin-page.active {
+
+    display:block;
+
+}
+
+
+
+
+
+.signin-background {
+
+    position:absolute;
+
+    inset:0;
+
+}
+
+
+
+.signin-background img {
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    object-position:top;
+
+}
+
+
+
+.signin-overlay {
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.25);
+
+}
+
+
+
+
+
+.signin-topbar {
+
+    position:sticky;
+
+    top:0;
+
+    z-index:10;
+
+    height:65px;
+
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+
+    padding:0 20px;
+
+
+    background:rgba(255,255,255,.7);
+
+    backdrop-filter:blur(10px);
+
+
+    border-bottom:1px solid rgba(0,0,0,.1);
+
+
+}
+
+
+
+.signin-topbar h1 {
+
+
+    font-family:Georgia,serif;
+
+    font-size:22px;
+
+    letter-spacing:.2em;
+
+}
+
+
+
+.signin-topbar button {
+
+
+    background:none;
+
+    border:none;
+
+
+    font-size:28px;
+
+    cursor:pointer;
+
+
+}
+
+
+
+
+
+
+
+/* FORM */
+
+
+.signin-content {
+
+
+    position:relative;
+
+    z-index:5;
+
+
+    display:flex;
+
+    justify-content:center;
+
+
+    padding:50px 24px;
+
+
+}
+
+
+
+.signin-box {
+
+
+    width:100%;
+
+    max-width:400px;
+
+
+    color:white;
+
+
+}
+
+
+
+.signin-box h2 {
+
+
+    font-size:13px;
+
+    letter-spacing:.2em;
+
+    text-transform:uppercase;
+
+    font-weight:500;
+
+
+    margin-bottom:30px;
+
+
+}
+
+
+
+.signin-box label {
+
+
+    display:block;
+
+
+    font-size:13px;
+
+
+    margin-bottom:8px;
+
+
+}
+
+
+
+.signin-box input {
+
+
+    width:100%;
+
+    height:44px;
+
+
+    background:rgba(255,255,255,.2);
+
+
+    border:1px solid white;
+
+
+    color:white;
+
+
+    padding:0 15px;
+
+
+    outline:none;
+
+
+}
+
+
+
+.signin-box input::placeholder {
+
+
+    color:rgba(255,255,255,.7);
+
+}
+
+
+
+
+
+.password-box {
+
+    position:relative;
+
+}
+
+
+
+.password-box button {
+
+
+    position:absolute;
+
+    right:12px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+
+    background:none;
+
+    border:none;
+
+    color:white;
+
+
+    font-size:11px;
+
+    letter-spacing:.1em;
+
+
+}
+
+
+
+
+
+.forgot-row {
+
 
     display:flex;
 
     justify-content:space-between;
 
-    font-size:11px;
+    margin:15px 0;
+
+
+}
+
+
+
+.forgot-row button {
+
+
+    background:none;
+
+    border:none;
+
+    color:white;
+
+    text-decoration:underline;
+
+
+}
+
+
+
+.signin-button,
+.register-button {
+
+
+    width:100%;
+
+    height:46px;
+
+
+    background:black;
+
+    color:white;
+
+
+    border:none;
+
+
+    cursor:pointer;
+
+
+    font-size:13px;
+
+    letter-spacing:.2em;
+
+    text-transform:uppercase;
+
+
+}
+
+
+
+
+
+.signin-box hr {
+
+
+    border:none;
+
+    height:1px;
+
+    background:rgba(255,255,255,.3);
+
+    margin:35px 0;
+
+
+}
+
+
+
+.signin-box p {
+
+
+    font-size:13px;
+
+    line-height:1.6;
+
+
+}
+
+
+
+.terms {
+
+
+    margin-top:40px;
+
+    text-align:center;
+
+    color:rgba(255,255,255,.6);
+
+    font-size:11px!important;
+
+}
+
+
+
+
+
+
+
+
+/* =========================
+        FOOTER
+========================= */
+
+
+footer {
+
+
+    border-top:1px solid rgba(0,0,0,.1);
+
+
+    margin-top:50px;
+
+
+    padding:32px;
+
+
+    display:flex;
+
+
+    justify-content:space-between;
+
 
     color:rgba(0,0,0,.4);
 
+
+    font-size:11px;
+
+
+    letter-spacing:.05em;
+
+
 }
 
 
-footer a {
 
-    margin-left:25px;
+.footer-links {
 
-    color:inherit;
 
-    text-decoration:none;
+    display:flex;
+
+    gap:25px;
+
 
 }
+
+
+
+.footer-links a:hover {
+
+
+    color:black;
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================
+        MOBILE
+========================= */
+
+
+
+@media(max-width:768px){
+
+
+
+.header-main {
+
+    padding:0 20px;
+
+}
+
+
+
+.search-container {
+
+    order:3;
+
+    width:100%;
+
+    padding:15px 20px;
+
+}
+
+
+
+.search-box {
+
+    width:100%;
+
+}
+
+
+
+.category-bar {
+
+
+    justify-content:flex-start;
+
+    gap:25px;
+
+    padding-left:20px;
+
+
+}
+
+
+
+
+.product-grid {
+
+
+    grid-template-columns:1fr;
+
+
+    gap:1px;
+
+
+}
+
+
+
+
+.products-container {
+
+
+    padding:0;
+
+
+}
+
+
+
+.product-card {
+
+
+    padding:16px;
+
+
+    background:#f7f5f1;
+
+
+}
+
+
+
+
+.quick-view {
+
+
+    opacity:1;
+
+}
+
+
+
+footer {
+
+
+    flex-direction:column;
+
+    gap:15px;
+
+
+}
+
+
+}
+
+
+
+
+
+@media(min-width:769px) and (max-width:1100px){
+
+
+.product-grid {
+
+
+    grid-template-columns:repeat(2,1fr);
+
+
+}
+
+
+
+}
+
