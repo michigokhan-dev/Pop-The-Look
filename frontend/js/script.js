@@ -1,116 +1,122 @@
-/* =====================================
-   POP THE LOOK - JAVASCRIPT
-===================================== */
+// ELEMENTS
+
+const accountBtn = document.getElementById("accountBtn");
+const accountDropdown = document.getElementById("accountDropdown");
+
+const signinOpen = document.getElementById("signinOpen");
+const signinPage = document.getElementById("signinPage");
+const closeSignin = document.getElementById("closeSignin");
+
+const signOut = document.getElementById("signOut");
+
+const showPassword = document.getElementById("showPassword");
+const passwordInput = document.getElementById("passwordInput");
+
+const toast = document.getElementById("toast");
+
+const searchInput = document.getElementById("searchInput");
+const searchPlaceholder = document.getElementById("searchPlaceholder");
+
+const wishlistBtn = document.getElementById("wishlistBtn");
+const bagBtn = document.getElementById("bagBtn");
+const shopButton = document.getElementById("shopButton");
 
 
-document.addEventListener("DOMContentLoaded", function(){
+
+
+// ACCOUNT DROPDOWN
+
+accountBtn.addEventListener("click", () => {
+
+    accountDropdown.classList.toggle("active");
+
+});
 
 
 
-/* =========================
-   SEARCH PLACEHOLDER ANIMATION
-========================= */
+// CLOSE DROPDOWN WHEN CLICK OUTSIDE
+
+document.addEventListener("mousedown", (e) => {
+
+    if(
+        !accountDropdown.contains(e.target) &&
+        !accountBtn.contains(e.target)
+    ){
+
+        accountDropdown.classList.remove("active");
+
+    }
+
+});
 
 
-const placeholders = [
-    "Search dresses...",
-    "Search outerwear...",
-    "Search tops...",
-    "Search accessories...",
-    "Search bottoms..."
-];
 
 
-const placeholder = document.querySelector(".search-placeholder");
 
-let placeholderIndex = 0;
+// OPEN SIGN IN
 
+signinOpen.addEventListener("click", () => {
 
-setInterval(()=>{
+    accountDropdown.classList.remove("active");
 
+    signinPage.classList.remove("hidden");
 
-    if(placeholder){
-
-        placeholder.style.opacity = "0";
-
-
-        setTimeout(()=>{
+});
 
 
-            placeholderIndex =
-            (placeholderIndex + 1) %
-            placeholders.length;
 
 
-            placeholder.textContent =
-            placeholders[placeholderIndex];
+
+// SIGN OUT BUTTON
+
+signOut.addEventListener("click", () => {
+
+    accountDropdown.classList.remove("active");
+
+    signinPage.classList.remove("hidden");
+
+});
 
 
-            placeholder.style.opacity = "1";
 
 
-        },250);
+
+// CLOSE SIGN IN
+
+closeSignin.addEventListener("click", () => {
+
+    signinPage.classList.add("hidden");
+
+});
+
+
+
+
+
+
+// PASSWORD SHOW / HIDE
+
+showPassword.addEventListener("click", () => {
+
+
+    if(passwordInput.type === "password"){
+
+        passwordInput.type = "text";
+
+        showPassword.textContent = "HIDE";
+
+
+    } else {
+
+
+        passwordInput.type = "password";
+
+        showPassword.textContent = "SHOW";
 
 
     }
 
 
-},2500);
-
-
-
-
-
-
-
-/* =========================
-   ACCOUNT DROPDOWN
-========================= */
-
-
-const accountBtn =
-document.querySelector("#accountBtn");
-
-
-const accountDropdown =
-document.querySelector(".account-dropdown");
-
-
-
-if(accountBtn){
-
-
-accountBtn.addEventListener("click",()=>{
-
-
-    accountDropdown.classList.toggle("active");
-
-
-});
-
-
-}
-
-
-
-
-
-document.addEventListener("click",(event)=>{
-
-
-if(
-accountDropdown &&
-!accountDropdown.contains(event.target) &&
-!accountBtn.contains(event.target)
-
-){
-
-accountDropdown.classList.remove("active");
-
-
-}
-
-
 });
 
 
@@ -119,238 +125,137 @@ accountDropdown.classList.remove("active");
 
 
 
-
-
-/* =========================
-   SIGN IN PAGE OPEN/CLOSE
-========================= */
-
-
-const openSignin =
-document.querySelector("#openSignin");
-
-
-const signinPage =
-document.querySelector(".signin-page");
-
-
-const closeSignin =
-document.querySelector("#closeSignin");
-
-
-
-if(openSignin){
-
-
-openSignin.addEventListener("click",()=>{
-
-
-signinPage.classList.add("active");
-
-
-accountDropdown.classList.remove("active");
-
-
-});
-
-
-}
-
-
-
-if(closeSignin){
-
-
-closeSignin.addEventListener("click",()=>{
-
-
-signinPage.classList.remove("active");
-
-
-});
-
-
-}
-
-
-
-
-
-
-
-
-/* =========================
-   SHOW PASSWORD
-========================= */
-
-
-const password =
-document.querySelector("#password");
-
-
-const showPassword =
-document.querySelector("#showPassword");
-
-
-
-if(showPassword){
-
-
-showPassword.addEventListener("click",()=>{
-
-
-if(password.type==="password"){
-
-
-password.type="text";
-
-showPassword.textContent="HIDE";
-
-
-}else{
-
-
-password.type="password";
-
-showPassword.textContent="SHOW";
-
-
-}
-
-
-});
-
-
-}
-
-
-
-
-
-
-
-/* =========================
-   BAG BUTTON
-========================= */
-
-
-const bagButton =
-document.querySelector(".bag");
-
-
-
-const bagCount =
-document.querySelector(".bag-count");
-
-
-
-if(bagButton){
-
-
-bagButton.addEventListener("click",()=>{
-
-
-showToast(
-`Bag (${bagCount.textContent}) — checkout preview`
-);
-
-
-});
-
-
-}
-
-
-
-
-
-
-
-/* =========================
-   CATEGORY BUTTONS
-========================= */
-
-
-const categoryButtons =
-document.querySelectorAll(".category-bar button");
-
-
-
-categoryButtons.forEach(button=>{
-
-
-button.addEventListener("click",()=>{
-
-
-categoryButtons.forEach(btn=>
-btn.classList.remove("active")
-);
-
-
-
-button.classList.add("active");
-
-
-
-showToast(
-button.textContent + " — curated"
-);
-
-
-
-});
-
-
-});
-
-
-
-
-
-
-
-
-
-/* =========================
-   TOAST MESSAGE
-========================= */
-
+// TOAST FUNCTION
 
 function showToast(message){
 
+    toast.textContent = message;
 
-let toast =
-document.querySelector(".toast");
-
-
-
-if(toast){
+    toast.classList.add("show");
 
 
-toast.textContent=message;
+    setTimeout(()=>{
+
+        toast.classList.remove("show");
+
+    },2200);
 
 
-toast.classList.add("show");
+}
 
 
 
-setTimeout(()=>{
 
 
-toast.classList.remove("show");
+// PLACEHOLDER BUTTON ACTIONS
+
+wishlistBtn.addEventListener("click",()=>{
+
+    showToast("WISHLIST — COMING SOON");
+
+});
+
+
+bagBtn.addEventListener("click",()=>{
+
+    showToast("BAG — COMING SOON");
+
+});
+
+
+shopButton.addEventListener("click",()=>{
+
+    showToast("SHOP NOW — COMING SOON");
+
+});
+
+
+
+
+
+
+
+// SEARCH PLACEHOLDER ANIMATION
+
+const placeholders = [
+
+"Search dresses...",
+
+"Search outerwear...",
+
+"Search tops...",
+
+"Search accessories...",
+
+"Search bottoms..."
+
+];
+
+
+let placeholderIndex = 0;
+
+
+
+setInterval(()=>{
+
+
+    if(searchInput.value !== "") return;
+
+
+    searchPlaceholder.classList.add("fade");
+
+
+    setTimeout(()=>{
+
+
+        placeholderIndex++;
+
+
+        if(placeholderIndex >= placeholders.length){
+
+            placeholderIndex = 0;
+
+        }
+
+
+        searchPlaceholder.textContent = placeholders[placeholderIndex];
+
+
+        searchPlaceholder.classList.remove("fade");
+
+
+    },250);
+
 
 
 },2500);
 
 
 
-}
 
 
-}
+// REGISTER BUTTON
+
+const registerButton = document.getElementById("registerButton");
+
+
+registerButton.addEventListener("click",()=>{
+
+    showToast("REGISTER — COMING SOON");
+
+});
 
 
 
 
+
+// SIGN IN BUTTON
+
+const loginButton = document.getElementById("loginButton");
+
+
+loginButton.addEventListener("click",()=>{
+
+    showToast("SIGNED IN — COMING SOON");
 
 });
