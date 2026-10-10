@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -10,98 +12,200 @@
 
 </head>
 
+
 <body>
 
-<header class="bg-white border-b border-black sticky top-0 z-20">
 
-  <div class="flex items-center justify-between px-8 py-5">
-
-    <a href="index.html" class="serif text-2xl tracking-[0.25em] font-bold">
-      POP THE LOOK
-    </a>
-
-    <div class="flex items-center gap-5 text-xl">
-
-      <button title="Wishlist">
-        ♡
-      </button>
-
-      <a href="frontend/pages/login.html" title="Account">
-        👤
-      </a>
-
-      <button class="text-sm font-bold">
-        👜 (0)
-      </button>
-
-    </div>
-
-  </div>
+<header class="luxury-header">
 
 
-  <div class="flex justify-center pb-5 px-5">
+<div class="header-container">
 
-    <div class="relative w-full max-w-2xl">
 
-      <span class="absolute left-5 top-1/2 -translate-y-1/2">
-        🔍
-      </span>
+<!-- LOGO -->
 
-      <input
-        type="text"
-        placeholder="Search outerwear..."
-        class="w-full h-12 rounded-full border border-black pl-12 pr-5 outline-none transition-all duration-300 focus:scale-105 focus:shadow-lg"
-      >
+<a href="index.html" class="logo">
+POP THE LOOK
+</a>
 
-    </div>
 
-  </div>
+
+<!-- SEARCH -->
+
+<div class="search-box">
+
+<span class="search-icon">
+⌕
+</span>
+
+<input 
+type="text"
+id="search"
+placeholder="Search outerwear..."
+>
+
+</div>
+
+
+
+<!-- RIGHT ICONS -->
+
+<div class="header-icons">
+
+<a href="#" title="Wishlist">
+♡
+</a>
+
+
+<a href="frontend/pages/login.html" title="Account">
+Account
+</a>
+
+
+<a href="#" title="Bag">
+👜 <span>(0)</span>
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+<!-- CATEGORY MENU -->
+
+<nav class="categories">
+
+<a href="#">ALL</a>
+
+<a href="#">OUTERWEAR</a>
+
+<a href="#">DRESSES</a>
+
+<a href="#">TOPS</a>
+
+<a href="#">BOTTOMS</a>
+
+<a href="#">ACCESSORIES</a>
+
+
+</nav>
+
 
 </header>
 
 
+
+
+
 <section class="hero">
 
-<h2>NEW COLLECTION</h2>
 
-<p>Discover the latest fashion styles</p>
+<h1>
+NEW COLLECTION
+</h1>
+
+
+<p>
+Discover the latest fashion styles
+</p>
+
 
 <button>
 SHOP NOW
 </button>
 
+
 </section>
+
+
+
 
 
 <section class="products">
 
-<h2>Featured Products</h2>
+
+<h2>
+FEATURED PRODUCTS
+</h2>
+
+
 
 <div class="product-grid">
 
-<div class="product">
-Product 1
-</div>
 
 <div class="product">
-Product 2
+WOOL BLEND COAT
 </div>
+
 
 <div class="product">
-Product 3
+SILK SLIP DRESS
 </div>
 
+
+<div class="product">
+LEATHER BAG
 </div>
+
+
+</div>
+
 
 </section>
 
 
+
+
+
 <footer>
 
-<p>© POP THE LOOK</p>
+<p>
+© POP THE LOOK
+</p>
 
 </footer>
 
 
+
+<script>
+
+const placeholders = [
+"Search dresses...",
+"Search outerwear...",
+"Search tops...",
+"Search accessories...",
+"Search bottoms..."
+];
+
+
+let i = 0;
+
+const search = document.getElementById("search");
+
+
+setInterval(()=>{
+
+if(search.value === ""){
+search.placeholder = placeholders[i];
+
+i++;
+
+if(i >= placeholders.length){
+i = 0;
+}
+
+}
+
+},2500);
+
+
+</script>
+
+
+
 </body>
+
 </html>
