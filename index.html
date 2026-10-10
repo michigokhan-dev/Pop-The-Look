@@ -11,71 +11,117 @@
 
 </head>
 
+
 <body>
 
-<div class="app">
+<div class="page">
 
 
 <!-- HEADER -->
-
 <header class="header">
 
-    <div class="header-inner">
+    <div class="header-main">
 
         <!-- LOGO -->
-
         <div class="logo">
             POP THE LOOK
         </div>
 
 
         <!-- SEARCH -->
+        <div class="search-container">
 
-        <div class="search-wrapper">
+            <div class="search-box">
 
-            <span class="search-icon">
-                ⌕
-            </span>
+                <span class="search-icon">
+                    <svg width="14" height="14" viewBox="0 0 14 14">
+                        <circle cx="6" cy="6" r="4.5" fill="none" stroke="black" stroke-width="1.2"/>
+                        <path d="M10 10 L13 13" stroke="black" stroke-width="1.2"/>
+                    </svg>
+                </span>
 
-            <input 
-            id="searchInput"
-            type="text"
-            autocomplete="off"
-            >
 
-            <span id="placeholderText">
-                Search dresses...
-            </span>
+                <input 
+                id="searchInput"
+                type="text"
+                autocomplete="off"
+                >
+
+                <span id="placeholderText">
+                    Search dresses...
+                </span>
+
+            </div>
 
         </div>
 
 
-        <!-- ACTIONS -->
 
-        <div class="header-actions">
+        <!-- RIGHT MENU -->
+        <div class="header-right">
 
-            <button id="accountBtn">
+
+            <button 
+            id="accountBtn"
+            class="account-btn">
                 ACCOUNT
             </button>
 
 
-            <button>
-                ♡
-            </button>
+
+            <button 
+            id="bagBtn"
+            class="bag-btn">
+
+                <svg width="20" height="20" viewBox="0 0 20 20">
+
+                <path d="M3 6.5H17L16 17H4L3 6.5Z"
+                fill="none"
+                stroke="black"
+                stroke-width="1.2"/>
+
+                <path d="M7 6.5V4.5C7 2.8 8.3 1.5 10 1.5C11.6 1.5 13 2.8 13 4.5V6.5"
+                fill="none"
+                stroke="black"
+                stroke-width="1.2"/>
+
+                </svg>
 
 
-            <button id="bagBtn" class="bag">
-
-                <span>
-                    👜
+                <span class="bag-count">
+                    2
                 </span>
 
-                <small id="bagCount">
-                    2
-                </small>
 
             </button>
 
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- MOBILE SEARCH -->
+    <div class="mobile-search">
+
+        <div class="search-box">
+
+            <span class="search-icon">
+                🔍
+            </span>
+
+
+            <input 
+            id="mobileSearch"
+            type="text"
+            >
+
+
+            <span>
+                Search dresses...
+            </span>
 
         </div>
 
@@ -86,10 +132,9 @@
 
 
 
-<!-- CATEGORY BAR -->
+<!-- CATEGORY MENU -->
 
-
-<nav class="category-bar">
+<nav class="categories">
 
 <button class="active">
 ALL
@@ -118,128 +163,220 @@ ACCESSORIES
 
 </nav>
 
+  <!-- PRODUCT GRID -->
 
-
-
-<!-- PRODUCT AREA -->
-
-
-<main class="products">
+<main class="products-container">
 
 
 <div class="product-grid">
 
 
+
+<!-- PRODUCT 1 -->
+
 <div class="product-card">
 
 <div class="product-image">
 
-<div class="product-placeholder">
+<div class="luxury-placeholder">
 
+<span>
 OUTERWEAR
+</span>
 
 </div>
+
 
 <button class="quick-view">
-Quick view — $890
+QUICK VIEW — $890
 </button>
+
 
 </div>
 
+
+<div class="product-info">
+
+<div class="product-name-price">
 
 <h3>
 WOOL BLEND COAT
 </h3>
 
-<p>
-Camel / Heavy wool
-</p>
+<span>
+$890
+</span>
 
 </div>
 
 
+<p>
+Camel / Heavy wool
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<!-- PRODUCT 2 -->
 
 <div class="product-card">
 
 <div class="product-image">
 
-<div class="product-placeholder">
+<div class="luxury-placeholder">
 
+<span>
 DRESSES
+</span>
 
 </div>
+
 
 <button class="quick-view">
-Quick view — $420
+QUICK VIEW — $420
 </button>
+
 
 </div>
 
+
+<div class="product-info">
+
+<div class="product-name-price">
 
 <h3>
 SILK SLIP DRESS
 </h3>
 
-<p>
-Black / Bias cut
-</p>
+<span>
+$420
+</span>
 
 </div>
 
 
+<p>
+Black / Bias cut
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<!-- PRODUCT 3 -->
 
 <div class="product-card">
 
 <div class="product-image">
 
-<div class="product-placeholder">
+<div class="luxury-placeholder">
 
+<span>
 TOPS
+</span>
 
 </div>
+
 
 <button class="quick-view">
-Quick view — $380
+QUICK VIEW — $380
 </button>
+
 
 </div>
 
+
+<div class="product-info">
+
+<div class="product-name-price">
 
 <h3>
 CASHMERE KNIT
 </h3>
 
+<span>
+$380
+</span>
+
+</div>
+
+
 <p>
 Off-white / Fine gauge
 </p>
 
+
 </div>
 
-    <!-- PRODUCT 4 -->
+
+</div>
+
+
+
+
+
+<!-- PRODUCT 4 -->
 
 <div class="product-card">
 
 <div class="product-image">
 
-<div class="product-placeholder">
+<div class="luxury-placeholder">
+
+<span>
 BOTTOMS
+</span>
+
 </div>
+
 
 <button class="quick-view">
-Quick view — $340
+QUICK VIEW — $340
 </button>
 
+
 </div>
+
+
+<div class="product-info">
+
+<div class="product-name-price">
 
 <h3>
 TAILORED TROUSERS
 </h3>
 
+<span>
+$340
+</span>
+
+</div>
+
+
 <p>
 Black / High waist
 </p>
 
+
 </div>
+
+
+</div>
+
+
 
 
 
@@ -249,25 +386,49 @@ Black / High waist
 
 <div class="product-image">
 
-<div class="product-placeholder">
+<div class="luxury-placeholder">
+
+<span>
 ACCESSORIES
+</span>
+
 </div>
+
 
 <button class="quick-view">
-Quick view — $560
+QUICK VIEW — $560
 </button>
 
+
 </div>
+
+
+<div class="product-info">
+
+<div class="product-name-price">
 
 <h3>
 LEATHER SHOULDER BAG
 </h3>
 
+<span>
+$560
+</span>
+
+</div>
+
+
 <p>
 Noir / Calf leather
 </p>
 
+
 </div>
+
+
+</div>
+
+
 
 
 
@@ -277,50 +438,80 @@ Noir / Calf leather
 
 <div class="product-image">
 
-<div class="product-placeholder">
+<div class="luxury-placeholder">
+
+<span>
 OUTERWEAR
+</span>
+
 </div>
+
 
 <button class="quick-view">
-Quick view — $620
+QUICK VIEW — $620
 </button>
 
+
 </div>
+
+
+<div class="product-info">
+
+<div class="product-name-price">
 
 <h3>
 STRUCTURED BLAZER
 </h3>
 
+<span>
+$620
+</span>
+
+</div>
+
+
 <p>
 Charcoal / Double breasted
 </p>
 
+
 </div>
 
 
 </div>
+
+
+</div>
+
 
 </main>
 
 
 
 
+
 <!-- ACCOUNT DROPDOWN -->
 
-<div id="accountDropdown" class="account-dropdown">
+
+<div 
+id="accountDropdown"
+class="account-dropdown">
 
 
 <button>
 SIGN IN / REGISTER
 </button>
 
+
 <button>
 MY ACCOUNT
 </button>
 
+
 <button>
 MY ORDERS
 </button>
+
 
 <button>
 WISHLIST
@@ -341,10 +532,181 @@ SIGN OUT
 
 
 
-<!-- TOAST -->
+<!-- TOAST MESSAGE -->
 
-<div id="toast">
+<div 
+id="toast"
+class="toast">
+
 </div>
+
+    <!-- SIGN IN PAGE -->
+
+<div id="signinPage" class="signin-page">
+
+
+<div class="signin-background">
+
+<img 
+src="frontend/assets/hero.jpg"
+alt="Luxury fashion">
+
+<div class="signin-overlay"></div>
+
+</div>
+
+
+
+<div class="signin-topbar">
+
+<button id="closeSignin">
+&lt;
+</button>
+
+
+<h1>
+POP THE LOOK
+</h1>
+
+
+<div></div>
+
+</div>
+
+
+
+
+
+<div class="signin-content">
+
+
+<div class="signin-box">
+
+
+<h2>
+EXISTING CUSTOMERS
+</h2>
+
+
+
+<form>
+
+
+<label>
+Email Address
+</label>
+
+<input 
+type="email"
+placeholder="your@email.com">
+
+
+
+
+
+<label>
+Password
+</label>
+
+
+<div class="password-box">
+
+<input 
+id="password"
+type="password"
+placeholder="••••••••">
+
+
+<button 
+type="button"
+id="showPassword">
+
+SHOW
+
+</button>
+
+
+</div>
+
+
+
+
+
+<div class="forgot-row">
+
+<button type="button">
+Forgotten Password?
+</button>
+
+
+<span>
+BFPO?
+</span>
+
+
+</div>
+
+
+
+
+<button class="signin-button">
+
+SIGN IN
+
+</button>
+
+
+</form>
+
+
+
+
+<hr>
+
+
+
+
+<h2>
+NEW CUSTOMERS
+</h2>
+
+
+
+<p>
+
+Create an account to checkout faster,
+track orders and save your wishlist.
+
+</p>
+
+
+
+<button class="register-button">
+
+REGISTER NOW
+
+</button>
+
+
+
+
+<p class="terms">
+
+By signing in you agree to our Terms & Privacy.
+Luxury essentials curated for the modern wardrobe.
+
+</p>
+
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
 
 
 
@@ -353,35 +715,40 @@ SIGN OUT
 
 <!-- FOOTER -->
 
-<footer>
 
-<span>
-© 2025 POP THE LOOK — LONDON
-</span>
+<footer>
 
 
 <div>
+
+© 2025 POP THE LOOK — LONDON
+
+</div>
+
+
+
+<div class="footer-links">
 
 <a href="#">
 Privacy
 </a>
 
+
 <a href="#">
 Shipping
 </a>
 
+
 <a href="#">
 Contact
 </a>
+
 
 </div>
 
 
 </footer>
 
-
-
-</div>
 
 
 
