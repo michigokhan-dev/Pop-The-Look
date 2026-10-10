@@ -16,145 +16,263 @@
 <body>
 
 
-<header class="luxury-header">
+<header class="header">
 
 
-<div class="header-container">
+<div class="header-inner">
 
 
 <!-- LOGO -->
 
-<a href="index.html" class="logo">
+<div class="logo">
 POP THE LOOK
-</a>
+</div>
 
 
 
 <!-- SEARCH -->
 
-<div class="search-box">
+<div class="search">
 
-<span class="search-icon">
-⌕
-</span>
+<span>⌕</span>
 
 <input 
+id="searchInput"
 type="text"
-id="search"
-placeholder="Search outerwear..."
 >
 
-</div>
-
-
-
-<!-- RIGHT ICONS -->
-
-<div class="header-icons">
-
-<a href="#" title="Wishlist">
-♡
-</a>
-
-
-<a href="frontend/pages/login.html" title="Account">
-Account
-</a>
-
-
-<a href="#" title="Bag">
-👜 <span>(0)</span>
-</a>
-
-
-</div>
-
+<span 
+id="placeholder"
+class="placeholder"
+>
+Search dresses...
+</span>
 
 </div>
 
 
 
-<!-- CATEGORY MENU -->
 
-<nav class="categories">
+<!-- RIGHT MENU -->
 
-<a href="#">ALL</a>
+<div class="right-menu">
 
-<a href="#">OUTERWEAR</a>
 
-<a href="#">DRESSES</a>
+<button id="accountBtn">
+ACCOUNT
+</button>
 
-<a href="#">TOPS</a>
 
-<a href="#">BOTTOMS</a>
+<button class="bag">
 
-<a href="#">ACCESSORIES</a>
+👜
+
+<span>
+2
+</span>
+
+</button>
+
+
+</div>
+
+
+
+</div>
+
+
+
+<!-- CATEGORY -->
+
+<nav class="category">
+
+<a class="active">
+ALL
+</a>
+
+<a>
+OUTERWEAR
+</a>
+
+<a>
+DRESSES
+</a>
+
+<a>
+TOPS
+</a>
+
+<a>
+BOTTOMS
+</a>
+
+<a>
+ACCESSORIES
+</a>
 
 
 </nav>
 
 
+
 </header>
 
-
-
-
+  <!-- HERO -->
 
 <section class="hero">
 
+<div class="hero-overlay">
 
 <h1>
 NEW COLLECTION
 </h1>
 
-
 <p>
 Discover the latest fashion styles
 </p>
-
 
 <button>
 SHOP NOW
 </button>
 
+</div>
 
 </section>
 
 
 
 
+<!-- PRODUCTS -->
 
-<section class="products">
-
-
-<h2>
-FEATURED PRODUCTS
-</h2>
-
+<main class="products">
 
 
 <div class="product-grid">
 
 
-<div class="product">
+
+<div class="product-card">
+
+<div class="product-image">
+</div>
+
+<div class="product-info">
+
+<h3>
 WOOL BLEND COAT
+</h3>
+
+<p>
+Camel / Heavy wool
+</p>
+
+<span>
+$890
+</span>
+
+</div>
+
 </div>
 
 
-<div class="product">
+
+
+<div class="product-card">
+
+<div class="product-image">
+</div>
+
+<div class="product-info">
+
+<h3>
 SILK SLIP DRESS
+</h3>
+
+<p>
+Black / Bias cut
+</p>
+
+<span>
+$420
+</span>
+
+</div>
+
 </div>
 
 
-<div class="product">
-LEATHER BAG
+
+
+
+<div class="product-card">
+
+<div class="product-image">
+</div>
+
+<div class="product-info">
+
+<h3>
+CASHMERE KNIT
+</h3>
+
+<p>
+Off-white / Fine gauge
+</p>
+
+<span>
+$380
+</span>
+
+</div>
+
 </div>
 
 
+
+
 </div>
 
 
-</section>
+</main>
+
+
+
+
+
+<!-- ACCOUNT DROPDOWN -->
+
+<div 
+id="accountDropdown"
+class="account-dropdown"
+>
+
+
+<button>
+Sign In / Register
+</button>
+
+
+<button>
+My Account
+</button>
+
+
+<button>
+My Orders
+</button>
+
+
+<button>
+Wishlist
+</button>
+
+
+<button>
+Sign Out
+</button>
+
+
+</div>
 
 
 
@@ -162,15 +280,16 @@ LEATHER BAG
 
 <footer>
 
-<p>
 © POP THE LOOK
-</p>
 
 </footer>
 
 
 
+
+
 <script>
+
 
 const placeholders = [
 "Search dresses...",
@@ -181,25 +300,58 @@ const placeholders = [
 ];
 
 
-let i = 0;
+let index = 0;
 
-const search = document.getElementById("search");
+
+const placeholder = document.getElementById("placeholder");
 
 
 setInterval(()=>{
 
-if(search.value === ""){
-search.placeholder = placeholders[i];
 
-i++;
+placeholder.style.opacity = "0";
 
-if(i >= placeholders.length){
-i = 0;
+
+setTimeout(()=>{
+
+
+index++;
+
+
+if(index >= placeholders.length){
+index = 0;
 }
 
-}
+
+placeholder.textContent = placeholders[index];
+
+
+placeholder.style.opacity = "1";
+
+
+},300);
+
+
 
 },2500);
+
+
+
+
+
+const accountBtn = document.getElementById("accountBtn");
+
+const dropdown = document.getElementById("accountDropdown");
+
+
+accountBtn.onclick = ()=>{
+
+
+dropdown.classList.toggle("show");
+
+
+};
+
 
 
 </script>
