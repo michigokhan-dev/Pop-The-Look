@@ -5,34 +5,61 @@ body {
     color: #000;
 }
 
+/* HEADER */
+
 header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 25px 50px;
     background: white;
     border-bottom: 1px solid black;
 }
 
-header h1 {
+.serif {
     font-family: Georgia, serif;
+    font-size: 28px;
     letter-spacing: 5px;
+    font-weight: bold;
 }
 
-nav a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: black;
-    font-size: 14px;
+.header-icons {
+    display: flex;
+    gap: 25px;
+    font-size: 22px;
 }
 
-header > a {
+.header-icons a {
     text-decoration: none;
     color: black;
+}
+
+.search-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.search-box input {
+    width: 600px;
+    max-width: 90%;
+    height: 45px;
+    border-radius: 30px;
     border: 1px solid black;
-    padding: 8px 15px;
+    padding-left: 45px;
+    font-size: 16px;
+    transition: 0.3s;
 }
 
+.search-box input:focus {
+    transform: scale(1.03);
+    outline: none;
+}
+
+
+/* HERO */
 
 .hero {
     height: 550px;
@@ -47,33 +74,32 @@ header > a {
     text-align: center;
 }
 
-
 .hero h2 {
     font-size: 50px;
     letter-spacing: 5px;
 }
-
 
 .hero button {
     padding: 15px 40px;
     background: white;
     border: none;
     font-weight: bold;
+    cursor: pointer;
 }
 
+
+/* PRODUCTS */
 
 .products {
     padding: 40px;
     text-align: center;
 }
 
-
 .product-grid {
     display: flex;
     gap: 20px;
     justify-content: center;
 }
-
 
 .product {
     width: 250px;
@@ -85,6 +111,8 @@ header > a {
     background: white;
 }
 
+
+/* FOOTER */
 
 footer {
     padding: 30px;
