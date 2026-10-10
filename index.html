@@ -13,42 +13,71 @@
 
 <body>
 
-<header>
-
-    <!-- LOGO -->
-    <div class="logo">
-        POP THE LOOK
-    </div>
+<div class="app">
 
 
-    <!-- SEARCH -->
-    <div class="search-container">
+<!-- HEADER -->
 
-        <span class="search-icon">⌕</span>
+<header class="header">
 
-        <input 
-        type="text" 
-        id="search"
-        placeholder="Search outerwear..."
-        >
+    <div class="header-inner">
 
-    </div>
+        <!-- LOGO -->
+
+        <div class="logo">
+            POP THE LOOK
+        </div>
 
 
-    <!-- RIGHT ICONS -->
-    <div class="header-actions">
+        <!-- SEARCH -->
 
-        <a href="frontend/pages/login.html">
-            ACCOUNT
-        </a>
+        <div class="search-wrapper">
 
-        <a href="#">
-            ♡
-        </a>
+            <span class="search-icon">
+                ⌕
+            </span>
 
-        <a href="#">
-            👜 <span>(0)</span>
-        </a>
+            <input 
+            id="searchInput"
+            type="text"
+            autocomplete="off"
+            >
+
+            <span id="placeholderText">
+                Search dresses...
+            </span>
+
+        </div>
+
+
+        <!-- ACTIONS -->
+
+        <div class="header-actions">
+
+            <button id="accountBtn">
+                ACCOUNT
+            </button>
+
+
+            <button>
+                ♡
+            </button>
+
+
+            <button id="bagBtn" class="bag">
+
+                <span>
+                    👜
+                </span>
+
+                <small id="bagCount">
+                    2
+                </small>
+
+            </button>
+
+
+        </div>
 
     </div>
 
@@ -56,121 +85,310 @@
 </header>
 
 
-<!-- CATEGORY MENU -->
+
+<!-- CATEGORY BAR -->
+
 
 <nav class="category-bar">
 
-<a href="#">ALL</a>
-<a href="#">OUTERWEAR</a>
-<a href="#">DRESSES</a>
-<a href="#">TOPS</a>
-<a href="#">BOTTOMS</a>
-<a href="#">ACCESSORIES</a>
+<button class="active">
+ALL
+</button>
+
+<button>
+OUTERWEAR
+</button>
+
+<button>
+DRESSES
+</button>
+
+<button>
+TOPS
+</button>
+
+<button>
+BOTTOMS
+</button>
+
+<button>
+ACCESSORIES
+</button>
+
 
 </nav>
 
 
 
-<!-- HERO -->
 
-<section class="hero">
-
-<h1>NEW COLLECTION</h1>
-
-<p>Discover the latest fashion styles</p>
-
-<button>
-SHOP NOW
-</button>
-
-</section>
+<!-- PRODUCT AREA -->
 
 
+<main class="products">
 
-<!-- PRODUCTS -->
-
-<section class="products">
 
 <div class="product-grid">
 
 
 <div class="product-card">
-<h3>WOOL BLEND COAT</h3>
-<p>Camel / Heavy wool</p>
+
+<div class="product-image">
+
+<div class="product-placeholder">
+
+OUTERWEAR
+
 </div>
+
+<button class="quick-view">
+Quick view — $890
+</button>
+
+</div>
+
+
+<h3>
+WOOL BLEND COAT
+</h3>
+
+<p>
+Camel / Heavy wool
+</p>
+
+</div>
+
 
 
 <div class="product-card">
-<h3>SILK SLIP DRESS</h3>
-<p>Black / Bias cut</p>
+
+<div class="product-image">
+
+<div class="product-placeholder">
+
+DRESSES
+
 </div>
+
+<button class="quick-view">
+Quick view — $420
+</button>
+
+</div>
+
+
+<h3>
+SILK SLIP DRESS
+</h3>
+
+<p>
+Black / Bias cut
+</p>
+
+</div>
+
 
 
 <div class="product-card">
-<h3>CASHMERE KNIT</h3>
-<p>Off-white / Fine gauge</p>
+
+<div class="product-image">
+
+<div class="product-placeholder">
+
+TOPS
+
 </div>
 
+<button class="quick-view">
+Quick view — $380
+</button>
+
+</div>
+
+
+<h3>
+CASHMERE KNIT
+</h3>
+
+<p>
+Off-white / Fine gauge
+</p>
+
+</div>
+
+    <!-- PRODUCT 4 -->
 
 <div class="product-card">
-<h3>TAILORED TROUSERS</h3>
-<p>Black / High waist</p>
+
+<div class="product-image">
+
+<div class="product-placeholder">
+BOTTOMS
 </div>
 
+<button class="quick-view">
+Quick view — $340
+</button>
+
+</div>
+
+<h3>
+TAILORED TROUSERS
+</h3>
+
+<p>
+Black / High waist
+</p>
+
+</div>
+
+
+
+<!-- PRODUCT 5 -->
 
 <div class="product-card">
-<h3>LEATHER SHOULDER BAG</h3>
-<p>Noir / Calf leather</p>
+
+<div class="product-image">
+
+<div class="product-placeholder">
+ACCESSORIES
 </div>
 
+<button class="quick-view">
+Quick view — $560
+</button>
+
+</div>
+
+<h3>
+LEATHER SHOULDER BAG
+</h3>
+
+<p>
+Noir / Calf leather
+</p>
+
+</div>
+
+
+
+<!-- PRODUCT 6 -->
 
 <div class="product-card">
-<h3>STRUCTURED BLAZER</h3>
-<p>Charcoal / Double breasted</p>
+
+<div class="product-image">
+
+<div class="product-placeholder">
+OUTERWEAR
+</div>
+
+<button class="quick-view">
+Quick view — $620
+</button>
+
+</div>
+
+<h3>
+STRUCTURED BLAZER
+</h3>
+
+<p>
+Charcoal / Double breasted
+</p>
+
 </div>
 
 
 </div>
 
-</section>
+</main>
 
 
+
+
+<!-- ACCOUNT DROPDOWN -->
+
+<div id="accountDropdown" class="account-dropdown">
+
+
+<button>
+SIGN IN / REGISTER
+</button>
+
+<button>
+MY ACCOUNT
+</button>
+
+<button>
+MY ORDERS
+</button>
+
+<button>
+WISHLIST
+</button>
+
+
+<hr>
+
+
+<button>
+SIGN OUT
+</button>
+
+
+</div>
+
+
+
+
+
+<!-- TOAST -->
+
+<div id="toast">
+</div>
+
+
+
+
+
+
+<!-- FOOTER -->
 
 <footer>
 
-© POP THE LOOK
+<span>
+© 2025 POP THE LOOK — LONDON
+</span>
+
+
+<div>
+
+<a href="#">
+Privacy
+</a>
+
+<a href="#">
+Shipping
+</a>
+
+<a href="#">
+Contact
+</a>
+
+</div>
+
 
 </footer>
 
 
-<script>
 
-const placeholders = [
-"Search dresses...",
-"Search outerwear...",
-"Search tops...",
-"Search accessories...",
-"Search bottoms..."
-];
+</div>
 
 
-let i = 0;
-
-setInterval(()=>{
-
-document.getElementById("search").placeholder = placeholders[i];
-
-i++;
-
-if(i >= placeholders.length){
-i = 0;
-}
-
-},2500);
 
 
-</script>
+<script src="frontend/js/script.js"></script>
 
 
 </body>
+
 </html>
