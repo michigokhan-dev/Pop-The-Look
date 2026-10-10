@@ -5,58 +5,98 @@ body {
     color: #000;
 }
 
-/* HEADER */
 
-header {
+/* LUXURY HEADER */
+
+.lux-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 25px 50px;
+    padding: 25px 60px;
     background: white;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #ddd;
 }
 
-.serif {
+
+.lux-logo {
     font-family: Georgia, serif;
-    font-size: 28px;
+    font-size: 26px;
     letter-spacing: 5px;
     font-weight: bold;
-}
-
-.header-icons {
-    display: flex;
-    gap: 25px;
-    font-size: 22px;
-}
-
-.header-icons a {
     text-decoration: none;
     color: black;
 }
 
-.search-box {
-    width: 100%;
+
+.lux-actions {
     display: flex;
-    justify-content: center;
-    margin-top: 20px;
+    align-items: center;
+    gap: 25px;
 }
 
-.search-box input {
-    width: 600px;
-    max-width: 90%;
-    height: 45px;
-    border-radius: 30px;
+
+.lux-actions button,
+.lux-actions a {
+    background: none;
+    border: none;
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+/* SEARCH */
+
+.lux-search {
+    position: relative;
+    width: 350px;
+}
+
+
+.lux-search span {
+    position: absolute;
+    left: 18px;
+    top: 10px;
+    font-size: 18px;
+}
+
+
+.lux-search input {
+    width: 100%;
+    height: 42px;
     border: 1px solid black;
+    border-radius: 30px;
     padding-left: 45px;
-    font-size: 16px;
+    font-size: 14px;
     transition: 0.3s;
 }
 
-.search-box input:focus {
-    transform: scale(1.03);
+
+.lux-search input:focus {
+    transform: scale(1.04);
     outline: none;
 }
+
+
+
+/* CATEGORY BAR */
+
+.category-bar {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    padding: 20px;
+    background: white;
+    border-bottom: 1px solid #eee;
+}
+
+
+.category-bar a {
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
 
 
 /* HERO */
@@ -74,10 +114,12 @@ header {
     text-align: center;
 }
 
+
 .hero h2 {
     font-size: 50px;
     letter-spacing: 5px;
 }
+
 
 .hero button {
     padding: 15px 40px;
@@ -88,6 +130,7 @@ header {
 }
 
 
+
 /* PRODUCTS */
 
 .products {
@@ -95,11 +138,13 @@ header {
     text-align: center;
 }
 
+
 .product-grid {
     display: flex;
     gap: 20px;
     justify-content: center;
 }
+
 
 .product {
     width: 250px;
@@ -110,6 +155,7 @@ header {
     align-items: center;
     background: white;
 }
+
 
 
 /* FOOTER */
