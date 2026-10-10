@@ -1,490 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>POP THE LOOK</title>
 
-<link rel="stylesheet" href="frontend/css/style.css">
+<link rel="stylesheet" href="style.css">
 
 </head>
 
-
 <body>
 
-<div class="page">
+
+<div class="app">
+
+
+<!-- TOP BLACK BAR -->
+
+<div class="shipping-bar">
+COMPLIMENTARY SHIPPING ON ORDERS OVER $400 — RETURNS WITHIN 30 DAYS
+</div>
+
 
 
 <!-- HEADER -->
-<header class="header">
 
-    <div class="header-main">
-
-        <!-- LOGO -->
-        <div class="logo">
-            POP THE LOOK
-        </div>
+<header class="main-header">
 
 
-        <!-- SEARCH -->
-        <div class="search-container">
-
-            <div class="search-box">
-
-                <span class="search-icon">
-                    <svg width="14" height="14" viewBox="0 0 14 14">
-                        <circle cx="6" cy="6" r="4.5" fill="none" stroke="black" stroke-width="1.2"/>
-                        <path d="M10 10 L13 13" stroke="black" stroke-width="1.2"/>
-                    </svg>
-                </span>
-
-
-                <input 
-                id="searchInput"
-                type="text"
-                autocomplete="off"
-                >
-
-                <span id="placeholderText">
-                    Search dresses...
-                </span>
-
-            </div>
-
-        </div>
+<div class="logo">
+POP THE LOOK
+</div>
 
 
 
-        <!-- RIGHT MENU -->
-        <div class="header-right">
+<div class="header-actions">
 
 
-            <button 
-            id="accountBtn"
-            class="account-btn">
-                ACCOUNT
-            </button>
+<button id="accountBtn" class="icon-button">
 
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.4">
+<circle cx="12" cy="8" r="4.2"></circle>
+<path d="M4 20c0-4.4 3.6-7.2 8-7.2s8 2.8 8 7.2"></path>
+</svg>
 
-
-            <button 
-            id="bagBtn"
-            class="bag-btn">
-
-                <svg width="20" height="20" viewBox="0 0 20 20">
-
-                <path d="M3 6.5H17L16 17H4L3 6.5Z"
-                fill="none"
-                stroke="black"
-                stroke-width="1.2"/>
-
-                <path d="M7 6.5V4.5C7 2.8 8.3 1.5 10 1.5C11.6 1.5 13 2.8 13 4.5V6.5"
-                fill="none"
-                stroke="black"
-                stroke-width="1.2"/>
-
-                </svg>
-
-
-                <span class="bag-count">
-                    2
-                </span>
-
-
-            </button>
-
-
-        </div>
-
-
-    </div>
-
-
-
-    <!-- MOBILE SEARCH -->
-    <div class="mobile-search">
-
-        <div class="search-box">
-
-            <span class="search-icon">
-                🔍
-            </span>
-
-
-            <input 
-            id="mobileSearch"
-            type="text"
-            >
-
-
-            <span>
-                Search dresses...
-            </span>
-
-        </div>
-
-    </div>
-
-
-</header>
-
-
-
-<!-- CATEGORY MENU -->
-
-<nav class="categories">
-
-<button class="active">
-ALL
-</button>
-
-<button>
-OUTERWEAR
-</button>
-
-<button>
-DRESSES
-</button>
-
-<button>
-TOPS
-</button>
-
-<button>
-BOTTOMS
-</button>
-
-<button>
-ACCESSORIES
 </button>
 
 
-</nav>
-
-  <!-- PRODUCT GRID -->
-
-<main class="products-container">
 
 
-<div class="product-grid">
+<button id="wishlistBtn" class="icon-button">
 
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.35">
+<path d="M12 20s-6.5-4.2-8.7-7.2A4.8 4.8 0 0 1 12 7.5a4.8 4.8 0 0 1 8.7 5.3C18.5 15.8 12 20 12 20z"></path>
+</svg>
 
-
-<!-- PRODUCT 1 -->
-
-<div class="product-card">
-
-<div class="product-image">
-
-<div class="luxury-placeholder">
-
-<span>
-OUTERWEAR
-</span>
-
-</div>
-
-
-<button class="quick-view">
-QUICK VIEW — $890
 </button>
 
 
-</div>
 
 
-<div class="product-info">
+<button id="bagBtn" class="bag-button">
 
-<div class="product-name-price">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.35">
 
-<h3>
-WOOL BLEND COAT
-</h3>
+<path d="M6 8h12l-1 12H7L6 8z"></path>
 
-<span>
-$890
-</span>
+<path d="M9 8V6a3 3 0 0 1 6 0v2"></path>
 
-</div>
+</svg>
 
+<span>(0)</span>
 
-<p>
-Camel / Heavy wool
-</p>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-<!-- PRODUCT 2 -->
-
-<div class="product-card">
-
-<div class="product-image">
-
-<div class="luxury-placeholder">
-
-<span>
-DRESSES
-</span>
-
-</div>
-
-
-<button class="quick-view">
-QUICK VIEW — $420
 </button>
 
 
-</div>
-
-
-<div class="product-info">
-
-<div class="product-name-price">
-
-<h3>
-SILK SLIP DRESS
-</h3>
-
-<span>
-$420
-</span>
 
 </div>
-
-
-<p>
-Black / Bias cut
-</p>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-<!-- PRODUCT 3 -->
-
-<div class="product-card">
-
-<div class="product-image">
-
-<div class="luxury-placeholder">
-
-<span>
-TOPS
-</span>
-
-</div>
-
-
-<button class="quick-view">
-QUICK VIEW — $380
-</button>
-
-
-</div>
-
-
-<div class="product-info">
-
-<div class="product-name-price">
-
-<h3>
-CASHMERE KNIT
-</h3>
-
-<span>
-$380
-</span>
-
-</div>
-
-
-<p>
-Off-white / Fine gauge
-</p>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-<!-- PRODUCT 4 -->
-
-<div class="product-card">
-
-<div class="product-image">
-
-<div class="luxury-placeholder">
-
-<span>
-BOTTOMS
-</span>
-
-</div>
-
-
-<button class="quick-view">
-QUICK VIEW — $340
-</button>
-
-
-</div>
-
-
-<div class="product-info">
-
-<div class="product-name-price">
-
-<h3>
-TAILORED TROUSERS
-</h3>
-
-<span>
-$340
-</span>
-
-</div>
-
-
-<p>
-Black / High waist
-</p>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-<!-- PRODUCT 5 -->
-
-<div class="product-card">
-
-<div class="product-image">
-
-<div class="luxury-placeholder">
-
-<span>
-ACCESSORIES
-</span>
-
-</div>
-
-
-<button class="quick-view">
-QUICK VIEW — $560
-</button>
-
-
-</div>
-
-
-<div class="product-info">
-
-<div class="product-name-price">
-
-<h3>
-LEATHER SHOULDER BAG
-</h3>
-
-<span>
-$560
-</span>
-
-</div>
-
-
-<p>
-Noir / Calf leather
-</p>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-<!-- PRODUCT 6 -->
-
-<div class="product-card">
-
-<div class="product-image">
-
-<div class="luxury-placeholder">
-
-<span>
-OUTERWEAR
-</span>
-
-</div>
-
-
-<button class="quick-view">
-QUICK VIEW — $620
-</button>
-
-
-</div>
-
-
-<div class="product-info">
-
-<div class="product-name-price">
-
-<h3>
-STRUCTURED BLAZER
-</h3>
-
-<span>
-$620
-</span>
-
-</div>
-
-
-<p>
-Charcoal / Double breasted
-</p>
-
-
-</div>
-
-
-</div>
-
-
-</div>
-
-
-</main>
 
 
 
@@ -492,13 +86,10 @@ Charcoal / Double breasted
 
 <!-- ACCOUNT DROPDOWN -->
 
-
-<div 
-id="accountDropdown"
-class="account-dropdown">
+<div id="accountDropdown" class="account-dropdown">
 
 
-<button>
+<button id="signinOpen">
 SIGN IN / REGISTER
 </button>
 
@@ -518,11 +109,13 @@ WISHLIST
 </button>
 
 
-<hr>
+<div class="dropdown-line"></div>
 
 
-<button>
-SIGN OUT
+<button id="signOut">
+
+<span>→</span> SIGN OUT
+
 </button>
 
 
@@ -530,36 +123,130 @@ SIGN OUT
 
 
 
+</header>
+
+    <!-- SEARCH SECTION -->
+
+<section class="search-section">
+
+    <div class="search-container">
+
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.8">
+            <circle cx="11" cy="11" r="6"></circle>
+            <path d="M20 20l-3.5-3.5"></path>
+        </svg>
+
+
+        <input 
+            id="searchInput"
+            type="text"
+            autocomplete="off"
+        >
+
+
+        <span id="searchPlaceholder">
+            Search dresses...
+        </span>
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+
+
+<img 
+src="assets/hero.jpeg"
+alt="Autumn Winter 2026 campaign"
+class="hero-image"
+>
+
+
+<div class="hero-overlay"></div>
+
+
+
+<div class="hero-content">
+
+
+<p class="hero-season">
+AUTUMN / WINTER 2026
+</p>
+
+
+
+<h1>
+
+<span>
+Quiet luxury.
+</span>
+
+
+<span class="hero-italic">
+Loud presence.
+</span>
+
+
+</h1>
+
+
+
+
+<button id="shopButton">
+
+SHOP NOW
+
+</button>
+
+
+
+</div>
+
+
+</section>
+
+
+
 
 
 <!-- TOAST MESSAGE -->
 
-<div 
-id="toast"
-class="toast">
+<div id="toast">
 
 </div>
 
-    <!-- SIGN IN PAGE -->
+   <!-- SIGN IN PAGE -->
 
-<div id="signinPage" class="signin-page">
+<div id="signinPage" class="signin-page hidden">
 
-
-<div class="signin-background">
 
 <img 
-src="frontend/assets/hero.jpg"
-alt="Luxury fashion">
+src="assets/hero.jpeg"
+class="signin-background"
+alt=""
+>
+
 
 <div class="signin-overlay"></div>
 
-</div>
 
 
+<div class="signin-content">
+
+
+
+<!-- TOP BAR -->
 
 <div class="signin-topbar">
 
-<button id="closeSignin">
+
+<button id="closeSignin" class="back-button">
 &lt;
 </button>
 
@@ -569,60 +256,58 @@ POP THE LOOK
 </h1>
 
 
-<div></div>
-
 </div>
 
 
 
 
 
-<div class="signin-content">
+<!-- FORM AREA -->
+
+<div class="signin-form-container">
 
 
-<div class="signin-box">
+<div class="signin-form">
+
 
 
 <h2>
-EXISTING CUSTOMERS
+Existing Customers
 </h2>
 
 
 
-<form>
-
 
 <label>
-Email Address
-</label>
-
-<input 
-type="email"
-placeholder="your@email.com">
-
-
-
-
-
-<label>
-Password
+Email Address or Customer Number
 </label>
 
 
-<div class="password-box">
-
 <input 
-id="password"
+id="emailInput"
+type="text"
+>
+
+
+
+
+<label>
+Your Password
+</label>
+
+
+
+<div class="password-row">
+
+
+<input
+id="passwordInput"
 type="password"
-placeholder="••••••••">
+>
 
 
-<button 
-type="button"
-id="showPassword">
-
+<button id="showPassword">
 SHOW
-
 </button>
 
 
@@ -632,71 +317,51 @@ SHOW
 
 
 
-<div class="forgot-row">
-
-<button type="button">
-Forgotten Password?
-</button>
-
-
-<span>
-BFPO?
-</span>
-
-
-</div>
+<p class="forgot-password">
+Forgotten Password
+</p>
 
 
 
 
-<button class="signin-button">
+<button class="black-button" id="loginButton">
 
 SIGN IN
 
 </button>
 
 
-</form>
 
 
-
-
-<hr>
-
-
-
-
-<h2>
-NEW CUSTOMERS
-</h2>
-
-
-
-<p>
-
-Create an account to checkout faster,
-track orders and save your wishlist.
-
+<p class="bfpo">
+BFPO
 </p>
 
 
 
-<button class="register-button">
+
+
+
+<div class="register-area">
+
+
+<h2>
+New Customers
+</h2>
+
+
+<button class="black-button" id="registerButton">
 
 REGISTER NOW
 
 </button>
 
 
+</div>
 
 
-<p class="terms">
 
-By signing in you agree to our Terms & Privacy.
-Luxury essentials curated for the modern wardrobe.
-
-</p>
-
+</div>
 
 
 </div>
@@ -711,51 +376,11 @@ Luxury essentials curated for the modern wardrobe.
 
 
 
-
-
-<!-- FOOTER -->
-
-
-<footer>
-
-
-<div>
-
-© 2025 POP THE LOOK — LONDON
-
 </div>
 
 
-
-<div class="footer-links">
-
-<a href="#">
-Privacy
-</a>
-
-
-<a href="#">
-Shipping
-</a>
-
-
-<a href="#">
-Contact
-</a>
-
-
-</div>
-
-
-</footer>
-
-
-
-
-
-<script src="frontend/js/script.js"></script>
-
+<script src="script.js"></script>
 
 </body>
 
-</html>
+</html> 
