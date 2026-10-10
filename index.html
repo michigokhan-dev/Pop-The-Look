@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -12,269 +11,128 @@
 
 </head>
 
-
 <body>
 
+<header>
 
-<header class="header">
-
-
-<div class="header-inner">
-
-
-<!-- LOGO -->
-
-<div class="logo">
-POP THE LOOK
-</div>
+    <!-- LOGO -->
+    <div class="logo">
+        POP THE LOOK
+    </div>
 
 
+    <!-- SEARCH -->
+    <div class="search-container">
 
-<!-- SEARCH -->
+        <span class="search-icon">⌕</span>
 
-<div class="search">
+        <input 
+        type="text" 
+        id="search"
+        placeholder="Search outerwear..."
+        >
 
-<span>⌕</span>
-
-<input 
-id="searchInput"
-type="text"
->
-
-<span 
-id="placeholder"
-class="placeholder"
->
-Search dresses...
-</span>
-
-</div>
+    </div>
 
 
+    <!-- RIGHT ICONS -->
+    <div class="header-actions">
+
+        <a href="frontend/pages/login.html">
+            ACCOUNT
+        </a>
+
+        <a href="#">
+            ♡
+        </a>
+
+        <a href="#">
+            👜 <span>(0)</span>
+        </a>
+
+    </div>
 
 
-<!-- RIGHT MENU -->
-
-<div class="right-menu">
+</header>
 
 
-<button id="accountBtn">
-ACCOUNT
-</button>
+<!-- CATEGORY MENU -->
 
+<nav class="category-bar">
 
-<button class="bag">
-
-👜
-
-<span>
-2
-</span>
-
-</button>
-
-
-</div>
-
-
-
-</div>
-
-
-
-<!-- CATEGORY -->
-
-<nav class="category">
-
-<a class="active">
-ALL
-</a>
-
-<a>
-OUTERWEAR
-</a>
-
-<a>
-DRESSES
-</a>
-
-<a>
-TOPS
-</a>
-
-<a>
-BOTTOMS
-</a>
-
-<a>
-ACCESSORIES
-</a>
-
+<a href="#">ALL</a>
+<a href="#">OUTERWEAR</a>
+<a href="#">DRESSES</a>
+<a href="#">TOPS</a>
+<a href="#">BOTTOMS</a>
+<a href="#">ACCESSORIES</a>
 
 </nav>
 
 
 
-</header>
-
-  <!-- HERO -->
+<!-- HERO -->
 
 <section class="hero">
 
-<div class="hero-overlay">
+<h1>NEW COLLECTION</h1>
 
-<h1>
-NEW COLLECTION
-</h1>
-
-<p>
-Discover the latest fashion styles
-</p>
+<p>Discover the latest fashion styles</p>
 
 <button>
 SHOP NOW
 </button>
 
-</div>
-
 </section>
-
 
 
 
 <!-- PRODUCTS -->
 
-<main class="products">
-
+<section class="products">
 
 <div class="product-grid">
 
 
-
 <div class="product-card">
-
-<div class="product-image">
+<h3>WOOL BLEND COAT</h3>
+<p>Camel / Heavy wool</p>
 </div>
-
-<div class="product-info">
-
-<h3>
-WOOL BLEND COAT
-</h3>
-
-<p>
-Camel / Heavy wool
-</p>
-
-<span>
-$890
-</span>
-
-</div>
-
-</div>
-
-
 
 
 <div class="product-card">
-
-<div class="product-image">
+<h3>SILK SLIP DRESS</h3>
+<p>Black / Bias cut</p>
 </div>
-
-<div class="product-info">
-
-<h3>
-SILK SLIP DRESS
-</h3>
-
-<p>
-Black / Bias cut
-</p>
-
-<span>
-$420
-</span>
-
-</div>
-
-</div>
-
-
-
 
 
 <div class="product-card">
-
-<div class="product-image">
-</div>
-
-<div class="product-info">
-
-<h3>
-CASHMERE KNIT
-</h3>
-
-<p>
-Off-white / Fine gauge
-</p>
-
-<span>
-$380
-</span>
-
-</div>
-
+<h3>CASHMERE KNIT</h3>
+<p>Off-white / Fine gauge</p>
 </div>
 
 
-
-
+<div class="product-card">
+<h3>TAILORED TROUSERS</h3>
+<p>Black / High waist</p>
 </div>
 
 
-</main>
+<div class="product-card">
+<h3>LEATHER SHOULDER BAG</h3>
+<p>Noir / Calf leather</p>
+</div>
 
 
-
-
-
-<!-- ACCOUNT DROPDOWN -->
-
-<div 
-id="accountDropdown"
-class="account-dropdown"
->
-
-
-<button>
-Sign In / Register
-</button>
-
-
-<button>
-My Account
-</button>
-
-
-<button>
-My Orders
-</button>
-
-
-<button>
-Wishlist
-</button>
-
-
-<button>
-Sign Out
-</button>
+<div class="product-card">
+<h3>STRUCTURED BLAZER</h3>
+<p>Charcoal / Double breasted</p>
+</div>
 
 
 </div>
 
-
+</section>
 
 
 
@@ -285,11 +143,7 @@ Sign Out
 </footer>
 
 
-
-
-
 <script>
-
 
 const placeholders = [
 "Search dresses...",
@@ -300,64 +154,23 @@ const placeholders = [
 ];
 
 
-let index = 0;
-
-
-const placeholder = document.getElementById("placeholder");
-
+let i = 0;
 
 setInterval(()=>{
 
+document.getElementById("search").placeholder = placeholders[i];
 
-placeholder.style.opacity = "0";
+i++;
 
-
-setTimeout(()=>{
-
-
-index++;
-
-
-if(index >= placeholders.length){
-index = 0;
+if(i >= placeholders.length){
+i = 0;
 }
 
-
-placeholder.textContent = placeholders[index];
-
-
-placeholder.style.opacity = "1";
-
-
-},300);
-
-
-
 },2500);
-
-
-
-
-
-const accountBtn = document.getElementById("accountBtn");
-
-const dropdown = document.getElementById("accountDropdown");
-
-
-accountBtn.onclick = ()=>{
-
-
-dropdown.classList.toggle("show");
-
-
-};
-
 
 
 </script>
 
 
-
 </body>
-
 </html>
